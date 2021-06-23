@@ -30,7 +30,7 @@ Option 2) Put the file paths in the pipeline config file:
 
 plot_config.JSON contains:
 
-		"working_dir": "/absolute/path/to/abi/",
+	  "working_dir": "/absolute/path/to/abi/",
 
 	  "protein_network_data":"/absolute/path/to/protein/edges/file", -- 9606.protein.links.v11.0.txt --
 
@@ -44,8 +44,7 @@ plot_config.JSON contains:
 
 
 save changes by typing  `CTRL+X` and `Y`. The same process can be used to modify other pipeline parameters.
-
- and run the pipeline using the command:
+Then, run the pipeline using the command:
 
 			bash run_pipeline.sh
 
