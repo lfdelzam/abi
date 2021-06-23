@@ -1,0 +1,16 @@
+
+import os
+
+configfile: "./support_files/plot_config.JSON"
+
+workdir: config["working_dir"]
+protein_network_file = config["protein_network_data"]
+protein_domain_file = config["protein_domain_file"]
+params_suffix="node_degree_"+str(config["node_degree_cutoff"])+"_W_"+str(config["weigth_thresold"])
+rule print:
+  input: p=protein_network_file, d=protein_domain_file
+  output: expand("FIGURES_{params_suffix}/{name}.png", params_suffix=params_suffix, name=config["output_prefix_name_fig"])
+  params: c=int(config["node_degree_cutoff"]), s=int(config["weigth_thresold"]),
+          o="FIGURES_"+params_suffix+"/"+config["output_prefix_name_fig"]
+  message: "Performing analysis and printing out figure"
+  shell: "python src/protein_domains_vs_string_degree.py -i {input.p} -d {input.d} -o {params.o} -c {params.c} -s {params.s}"
