@@ -17,7 +17,14 @@ This pipleine creates a boxplot, comparing the number of domains of proteins wit
 
 ## Usage ##
 
-1) modified parameter in config file:
+Input files can be parse in two ways:
+
+Option 1) Run the pipeline using the following command:
+
+		bash run_pipeline.sh -d=<protein domain file> -p=<protein edges file>
+
+
+Option 2) Put the file paths in the pipeline config file:
 
 			nano support_files/plot_config.JSON
 
@@ -36,13 +43,13 @@ plot_config.JSON contains:
 	  "weigth_thresold": 500
 
 
-save changes by typing  `CTRL+X` and `Y`
+save changes by typing  `CTRL+X` and `Y`. The same process can be used to modify other pipeline parameters.
 
-2) run the pipeline:
+ and run the pipeline using the command:
 
 			bash run_pipeline.sh
+
 
 ## Output ##
 
 The png figures are will be placed in the directory `FIGURES_node_degree_<node_degree_cutoff>_W_<weigth_thresold>`
-The pipelone log file is stored in the working directory with the name `pipeline.log`
