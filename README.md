@@ -21,13 +21,20 @@ This pipleine creates a boxplot, comparing the number of domains of proteins wit
 
 			nano support_files/plot_config.JSON
 
+plot_config.JSON contains:
 
-	"working_dir": "/absolute/path/to/abi/",
-  "protein_network_data":"/absolute/path/to/protein/edges/file", -- 9606.protein.links.v11.0.txt --
-  "protein_domain_file":"/absolute/path/to/protein/domains/file", -- proteins_w_domains.txt --
-  "output_prefix_name_fig": "protein_domains_vs_string_degree",
-  "node_degree_cutoff": 100,
-  "weigth_thresold": 500
+		"working_dir": "/absolute/path/to/abi/",
+
+	  "protein_network_data":"/absolute/path/to/protein/edges/file", -- 9606.protein.links.v11.0.txt --
+
+	  "protein_domain_file":"/absolute/path/to/protein/domains/file", -- proteins_w_domains.txt --
+
+	  "output_prefix_name_fig": "protein_domains_vs_string_degree",
+
+	  "node_degree_cutoff": 100,
+
+	  "weigth_thresold": 500
+
 
 save changes by typing  `CTRL+X` and `Y`
 
