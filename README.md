@@ -5,21 +5,21 @@ Course applied bioinfomatic - Medbioinfo
 This pipleine creates a boxplot, comparing the number of domains of proteins with node degrees > and to the ones with node degrees <= user-defined cutoff, for a protein network where the edges weight are larger or equal to an user-defined threshold
 
 
-## installation ##
+## Installation ##
 
 1) Download the pipeline:
 
-	git clone
+			git clone https://github.com/lfdelzam/abi
 
 2) Installation of required software/packages:
 
-	bash install_packages.sh
+			bash install_packages.sh
 
-## usage ##
+## Usage ##
 
 1) modified parameter in config file:
 
-	nano support_files/plot_config.JSON
+			nano support_files/plot_config.JSON
 
 
 	"working_dir": "/absolute/path/to/abi/",
@@ -29,12 +29,13 @@ This pipleine creates a boxplot, comparing the number of domains of proteins wit
   "node_degree_cutoff": 100,
   "weigth_thresold": 500
 
+save changes by typing  `CTRL+X` and `Y`
 
 2) run the pipeline:
 
-	bash run_pipeline.sh
+			bash run_pipeline.sh
 
-## output ##
+## Output ##
 
 The png figures are will be placed in the directory `FIGURES_node_degree_<node_degree_cutoff>_W_<weigth_thresold>`
 The pipelone log file is stored in the working directory with the name `pipeline.log`
